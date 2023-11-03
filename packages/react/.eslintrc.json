@@ -1,0 +1,3 @@
+{
+  "extends": "@healthcare-ui/eslint-config"
+}

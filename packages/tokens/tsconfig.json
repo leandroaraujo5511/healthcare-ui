@@ -1,0 +1,4 @@
+{
+  "extends": "@healthcare-ui/ts-config/base.json",
+  "include": ["src"]
+}
