@@ -7,6 +7,27 @@ export const AvatarContainer = styled(Avatar.Root, {
   width: '$16',
   height: '$16',
   overflow: 'hidden',
+
+  variants: {
+    size: {
+      sm: {
+        width: '$10',
+        height: '$10',
+      },
+      md: {
+        width: '$16',
+        height: '$16',
+      },
+      xl: {
+        width: '$40',
+        height: '$40',
+      },
+    },
+  },
+
+  defaultVariants: {
+    size: 'md',
+  },
 })
 
 export const AvatarImage = styled(Avatar.Image, {
@@ -22,11 +43,32 @@ export const AvatarFallback = styled(Avatar.Fallback, {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: '$gray600',
-  color: '$gray800',
+  backgroundColor: '$gray500',
+  color: '$gray600',
 
-  svg: {
-    width: '$6',
-    height: '$6',
+  variants: {
+    size: {
+      sm: {
+        svg: {
+          width: '$8',
+          height: '$8',
+        },
+      },
+      md: {
+        svg: {
+          width: '$10',
+          height: '$10',
+        },
+      },
+      xl: {
+        svg: {
+          width: '$20',
+          height: '$20',
+        },
+      },
+    },
+  },
+  defaultVariants: {
+    size: 'md',
   },
 })

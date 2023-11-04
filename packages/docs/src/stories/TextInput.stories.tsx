@@ -1,10 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Box, Text, TextInput, TextInputProps } from '@healthcare-ui/react'
+import { Box, TextInput, TextInputProps } from '@healthcare-ui/react'
+import { EnvelopeSimple } from 'phosphor-react'
 
 export default {
   title: 'Form/Text Input',
   component: TextInput,
-  args: {},
+  args: {
+    label: 'Email address',
+  },
   decorators: [
     (Story) => {
       return (
@@ -12,7 +15,6 @@ export default {
           as="label"
           css={{ display: 'flex', flexDirection: 'column', gap: '$2' }}
         >
-          <Text size="sm">Email address</Text>
           {Story()}
         </Box>
       )
@@ -36,5 +38,11 @@ export const WithPrefix: StoryObj<TextInputProps> = {
   args: {
     prefix: 'cal.com/',
     placeholder: 'your-username',
+  },
+}
+
+export const Icon: StoryObj<TextInputProps> = {
+  args: {
+    icon: <EnvelopeSimple />,
   },
 }

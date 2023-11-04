@@ -1,5 +1,11 @@
 # @healthcare-ui/react
 
+## 1.1.0
+
+### Minor Changes
+
+- inclunde new tokens and created new components (Autocomplete-Modal-Switch-Loader-Tag)
+
 ## 3.0.0
 
 ### Major Changes

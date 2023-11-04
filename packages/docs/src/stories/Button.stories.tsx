@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button, ButtonProps } from '@healthcare-ui/react'
+import { Button, CustomButton, ButtonProps, Loader } from '@healthcare-ui/react'
 import { ArrowRight } from 'phosphor-react'
 
 export default {
@@ -71,5 +71,18 @@ export const WithIcon: StoryObj<ButtonProps> = {
 export const Disabled: StoryObj<ButtonProps> = {
   args: {
     disabled: true,
+  },
+}
+
+export const ButtonLoader: StoryObj<ButtonProps> = {
+  args: {
+    children: <Loader size="sm" />,
+    disabled: true,
+  },
+}
+
+export const ButtonLoading: StoryObj<ButtonProps> = {
+  args: {
+    loading: true,
   },
 }

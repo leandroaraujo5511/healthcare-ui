@@ -6,7 +6,7 @@ export default {
   component: Avatar,
   args: {
     src: 'https://github.com/diego3g.png',
-    alt: 'Diego Fernandes',
+    alt: 'Joe Doe',
   },
   argTypes: {
     src: {
@@ -22,5 +22,18 @@ export const Primary: StoryObj<AvatarProps> = {}
 export const WithFallback: StoryObj<AvatarProps> = {
   args: {
     src: undefined,
+  },
+}
+
+export const SizeSm: StoryObj<AvatarProps> = {
+  args: {
+    src: undefined,
+    size: 'sm',
+  },
+}
+export const SizeXl: StoryObj<AvatarProps> = {
+  args: {
+    src: undefined,
+    size: 'xl',
   },
 }

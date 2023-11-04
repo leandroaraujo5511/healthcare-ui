@@ -1,5 +1,10 @@
 import { styled } from '../../styles'
 
+export const Container = styled('div', {
+  display: 'grid',
+  gap: '$2',
+})
+
 export const TextInputContainer = styled('div', {
   backgroundColor: '$gray900',
   borderRadius: '$sm',
@@ -20,7 +25,7 @@ export const TextInputContainer = styled('div', {
   },
 
   '&:has(input:focus)': {
-    borderColor: '$ignite300',
+    borderColor: '$greyLight',
   },
 
   '&:has(input:disabled)': {
@@ -33,6 +38,24 @@ export const TextInputContainer = styled('div', {
   },
 })
 
+export const Label = styled('span', {
+  fontFamily: '$default',
+  fontSize: '$sm',
+  color: '$gray400',
+  fontWeight: 'regular',
+  paddingLeft: '$1',
+})
+
+export const IconContainer = styled('div', {
+  alignItems: 'center',
+  justifyContent: 'center',
+  paddingRight: '$2',
+  svg: {
+    width: '$5',
+    height: '$5',
+  },
+  color: '$white',
+})
 export const Prefix = styled('span', {
   fontFamily: '$default',
   fontSize: '$sm',

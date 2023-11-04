@@ -1,5 +1,6 @@
 import { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
+import { Loader } from './Loader'
 
 export const Button = styled('button', {
   all: 'unset',
@@ -18,7 +19,6 @@ export const Button = styled('button', {
   gap: '$2',
 
   cursor: 'pointer',
-
   svg: {
     width: '$4',
     height: '$4',
@@ -32,14 +32,23 @@ export const Button = styled('button', {
     boxShadow: '0 0 0 2px $colors$gray100',
   },
 
+  position: 'relative',
+
+  '&[data-loading="true"]': {
+    pointerEvents: 'none', // Desabilita os eventos do botão enquanto estiver carregando
+  },
+
+  '&[data-loading="true"] > *': {
+    opacity: 0, // Oculta o conteúdo do botão durante o carregamento
+  },
   variants: {
     variant: {
       primary: {
         color: '$white',
-        background: '$ignite500',
+        background: '$greyMid',
 
         '&:not(:disabled):hover': {
-          background: '$ignite300',
+          background: '$greyLight',
         },
 
         '&:disabled': {
@@ -48,11 +57,11 @@ export const Button = styled('button', {
       },
 
       secondary: {
-        color: '$ignite300',
-        border: '2px solid $ignite500',
+        color: '$greyLight',
+        border: '2px solid $greyMid',
 
         '&:not(:disabled):hover': {
-          background: '$ignite500',
+          background: '$greyMid',
           color: '$white',
         },
 
@@ -94,6 +103,21 @@ export const Button = styled('button', {
 
 export interface ButtonProps extends ComponentProps<typeof Button> {
   as?: ElementType
+  loading?: boolean
 }
 
-Button.displayName = 'Button'
+export const CustomButton: React.FC<ButtonProps> = ({
+  children,
+  loading,
+  ...props
+}) => {
+  return (
+    <Button
+      disabled={loading}
+      {...props}
+      data-loading={loading ? 'true' : undefined}
+    >
+      {loading ? <Loader size="sm" /> : children}
+    </Button>
+  )
+}
