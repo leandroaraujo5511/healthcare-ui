@@ -81,6 +81,9 @@ export const Button = styled('button', {
         '&:disabled': {
           color: '$gray600',
         },
+        '&:focus': {
+          boxShadow: 'none',
+        },
       },
     },
 
