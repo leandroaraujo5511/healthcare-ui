@@ -34,6 +34,13 @@ export const Disabled: StoryObj<TextInputProps> = {
   },
 }
 
+export const Error: StoryObj<TextInputProps> = {
+  args: {
+    error: true,
+    message: 'campo obrigatório',
+  },
+}
+
 export const WithPrefix: StoryObj<TextInputProps> = {
   args: {
     prefix: 'cal.com/',

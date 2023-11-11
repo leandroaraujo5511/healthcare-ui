@@ -48,3 +48,32 @@ export const Primary: StoryObj<AutocompleteProps> = {
     ],
   },
 }
+
+export const Secondary: StoryObj<AutocompleteProps> = {
+  args: {
+    error: true,
+    message: 'campo obrigatório',
+    suggestions: [
+      'Maçã',
+      'Banana',
+      'Cereja',
+      'Damasco',
+      'Pera',
+      'Abacaxi',
+      'Uva',
+      'Morango',
+      'Melancia',
+      'Laranja',
+      'Limão',
+      'Manga',
+      'Kiwi',
+      'Framboesa',
+      'Amora',
+      'Pêssego',
+      'Abacate',
+      'Goiaba',
+      'Maracujá',
+      'Tangerina',
+    ],
+  },
+}

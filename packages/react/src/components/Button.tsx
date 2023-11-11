@@ -35,11 +35,11 @@ export const Button = styled('button', {
   position: 'relative',
 
   '&[data-loading="true"]': {
-    pointerEvents: 'none', // Desabilita os eventos do botão enquanto estiver carregando
+    pointerEvents: 'none',
   },
 
   '&[data-loading="true"] > *': {
-    opacity: 0, // Oculta o conteúdo do botão durante o carregamento
+    opacity: 0,
   },
   variants: {
     variant: {

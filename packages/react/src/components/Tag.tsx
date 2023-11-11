@@ -6,14 +6,14 @@ export const Tag = styled('span', {
   color: '$textBase',
   padding: '$2 $4',
   borderRadius: '$lg',
-  fontSize: '$sm',
+  fontSize: '$xs',
   fontWeight: '$bold',
 
   variants: {
     variant: {
       primary: {
         backgroundColor: '$greyLight',
-        color: '$gray700',
+        color: '$white',
       },
 
       secondary: {
@@ -28,7 +28,7 @@ export const Tag = styled('span', {
 
       danger: {
         backgroundColor: '$dangerLight',
-        color: '$gray900',
+        color: '$white',
       },
       warning: {
         backgroundColor: '$warningLight',

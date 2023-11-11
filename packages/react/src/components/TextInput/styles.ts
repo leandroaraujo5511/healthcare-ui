@@ -22,6 +22,11 @@ export const TextInputContainer = styled('div', {
         padding: '$3 $4',
       },
     },
+    error: {
+      true: {
+        border: '2px solid $ecLight',
+      },
+    },
   },
 
   '&:has(input:focus)': {
@@ -42,6 +47,14 @@ export const Label = styled('span', {
   fontFamily: '$default',
   fontSize: '$sm',
   color: '$gray400',
+  fontWeight: 'regular',
+  paddingLeft: '$1',
+})
+export const MessageError = styled('span', {
+  marginTop: '-$1',
+  fontFamily: '$default',
+  fontSize: '$xxs',
+  color: '$ecLight',
   fontWeight: 'regular',
   paddingLeft: '$1',
 })

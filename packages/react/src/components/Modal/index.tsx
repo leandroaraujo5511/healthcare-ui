@@ -23,8 +23,10 @@ export interface ModalProps
   setOpen: Dispatch<SetStateAction<boolean>>
   children?: React.ReactNode
   action?: boolean
-  onButtonOk: (...args: any[]) => any
-  onButtonCancel: (...args: any[]) => any
+  onMessageOk?: string
+  onMessageCancel?: string
+  onButtonOk: () => void
+  onButtonCancel: () => void
 }
 
 export function Modal({
@@ -36,6 +38,8 @@ export function Modal({
   action,
   onButtonCancel,
   onButtonOk,
+  onMessageOk,
+  onMessageCancel,
 }: ModalProps) {
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
@@ -56,15 +60,11 @@ export function Modal({
           <ContentMain>{children}</ContentMain>
           {action && (
             <ButtonFooter>
-              <Button
-                variant={'tertiary'}
-                size="sm"
-                onClick={() => setOpen(false)}
-              >
-                Cancel
+              <Button variant={'tertiary'} size="sm" onClick={onButtonCancel}>
+                {onMessageCancel ?? 'Cancel'}
               </Button>
               <Button size="sm" onClick={() => onButtonOk}>
-                OK
+                {onMessageOk ?? 'OK'}
               </Button>
             </ButtonFooter>
           )}

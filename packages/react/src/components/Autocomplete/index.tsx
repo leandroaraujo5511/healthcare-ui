@@ -15,6 +15,8 @@ export interface AutocompleteProps {
   label?: string
   placeholder?: string
   icon?: ReactNode
+  error?: boolean
+  message?: string
 }
 
 export const Autocomplete: React.FC<AutocompleteProps> = ({
@@ -23,6 +25,8 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   label,
   placeholder,
   icon,
+  error,
+  message,
 }) => {
   const [inputValue, setInputValue] = useState('')
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([])
@@ -56,6 +60,8 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
           onChange={handleInputChange}
           placeholder={placeholder}
           icon={icon}
+          error={error}
+          message={message}
         />
         {showSuggestions && filteredSuggestions.length > 0 && (
           <SuggestionList>

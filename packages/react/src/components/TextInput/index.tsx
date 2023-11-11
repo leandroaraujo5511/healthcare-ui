@@ -4,6 +4,7 @@ import {
   IconContainer,
   Input,
   Label,
+  MessageError,
   Prefix,
   TextInputContainer,
 } from './styles'
@@ -14,18 +15,21 @@ export interface TextInputProps
   label?: string
   size?: ComponentProps<typeof TextInputContainer>['size']
   icon?: ReactNode
+  error?: boolean
+  message?: string
 }
 
 export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
-  ({ prefix, size, label, icon, ...props }, ref) => {
+  ({ prefix, size, label, icon, error, message, ...props }, ref) => {
     return (
       <Container>
         {!!label && <Label>{label}</Label>}
-        <TextInputContainer size={size}>
+        <TextInputContainer size={size} error={error}>
           {!!prefix && <Prefix>{prefix}</Prefix>}
           {!!icon && <IconContainer>{icon}</IconContainer>}
           <Input ref={ref} {...props} />
         </TextInputContainer>
+        <MessageError>{message}</MessageError>
       </Container>
     )
   },
