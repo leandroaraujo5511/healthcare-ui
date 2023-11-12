@@ -1,5 +1,12 @@
 # @healthcare-ui/react
 
+## 3.0.0
+
+### Major Changes
+
+- created component select
+- e798d5d: boxShandow variant button
+
 ## 2.0.0
 
 ### Major Changes
