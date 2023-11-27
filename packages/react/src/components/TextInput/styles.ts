@@ -12,6 +12,7 @@ export const TextInputContainer = styled('div', {
   border: '2px solid $gray900',
   display: 'flex',
   alignItems: 'center',
+  boxShadow: '0 0 0 1000px $gray900 inset',
 
   variants: {
     size: {

@@ -8,6 +8,10 @@ export const Tag = styled('span', {
   borderRadius: '$lg',
   fontSize: '$xs',
   fontWeight: '$bold',
+  maxWidth: '30ch',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
 
   variants: {
     variant: {

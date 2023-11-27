@@ -8,6 +8,7 @@ export interface SelectProps {
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void
   error?: boolean
   message?: string
+  disabled?: boolean
 }
 
 export const Select: React.FC<SelectProps> = ({
@@ -17,11 +18,12 @@ export const Select: React.FC<SelectProps> = ({
   onChange,
   error,
   message,
+  disabled,
 }) => {
   return (
     <Container>
       <Label>{label}</Label>
-      <SelectContainer onChange={onChange} error={error}>
+      <SelectContainer onChange={onChange} error={error} disabled={disabled}>
         <option value="">{placeholder ?? 'Selecione uma opção'}</option>
         {options.map((option) => (
           <option

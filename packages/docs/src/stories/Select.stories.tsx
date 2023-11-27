@@ -53,3 +53,9 @@ export const Error: StoryObj<SelectProps> = {
     message: 'Selecione uma opção',
   },
 }
+export const Disabled: StoryObj<SelectProps> = {
+  args: {
+    label: 'Opções',
+    disabled: true,
+  },
+}

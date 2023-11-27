@@ -1,5 +1,11 @@
 # @healthcare-ui/react
 
+## 4.0.0
+
+### Major Changes
+
+- include component tooltip - include prop disabled in Select and Autocomplete - include textOverflow in Tag
+
 ## 3.0.0
 
 ### Major Changes
