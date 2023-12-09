@@ -27,6 +27,11 @@ export const SelectContainer = styled('select', {
         border: '2px solid $ecLight',
       },
     },
+    disabled: {
+      true: {
+        cursor: 'not-allowed',
+      },
+    },
   },
 
   '&:has(input:focus)': {

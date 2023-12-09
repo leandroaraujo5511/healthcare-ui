@@ -11,7 +11,7 @@ export const AutocompleteContainer = styled('div', {
 
 export const SuggestionList = styled('ul', {
   position: 'absolute',
-  top: '100%',
+  top: '80%',
   left: '0',
   right: '0',
   border: '2px solid $greyLight',
@@ -22,6 +22,7 @@ export const SuggestionList = styled('ul', {
   backgroundColor: '$gray800',
   borderRadius: '0 0 4px 4px',
   color: '$white',
+  zIndex: 99,
 })
 
 export const SuggestionItem = styled('li', {

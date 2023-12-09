@@ -22,7 +22,7 @@ export default {
 export const Default: StoryObj<TooltipProps> = {
   args: {
     children: <Tag variant={'secondary'}>Tag</Tag>,
-    tooltipContent: 'Isso é uma Tag',
+    // tooltipContent: 'Isso é uma Tag',
     side: 'right',
   },
 }

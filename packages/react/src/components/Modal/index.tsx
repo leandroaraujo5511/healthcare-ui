@@ -13,6 +13,7 @@ import {
   ButtonClose,
   ButtonFooter,
   ContentMain,
+  Portal,
 } from './styles'
 
 export interface ModalProps
@@ -43,7 +44,7 @@ export function Modal({
 }: ModalProps) {
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Portal>
+      <Portal>
         <DialogContent size={size}>
           {!!title && (
             <Dialog.Title>
@@ -69,7 +70,7 @@ export function Modal({
             </ButtonFooter>
           )}
         </DialogContent>
-      </Dialog.Portal>
+      </Portal>
     </Dialog.Root>
   )
 }

@@ -1,5 +1,11 @@
 # @healthcare-ui/react
 
+## 5.0.0
+
+### Major Changes
+
+- adjusts layouts components modal - select - tootip - autocomplete
+
 ## 4.0.0
 
 ### Major Changes

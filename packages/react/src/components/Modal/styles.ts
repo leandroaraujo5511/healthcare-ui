@@ -2,6 +2,9 @@ import { styled } from '../../styles'
 import * as Dialog from '@radix-ui/react-dialog'
 import { X } from 'phosphor-react'
 
+export const Portal = styled(Dialog.Portal, {
+  zIndex: 2147483647,
+})
 export const DialogContent = styled(Dialog.Content, {
   backgroundColor: '$gray800',
   border: '1px solid $gray600',
@@ -58,7 +61,6 @@ export const DialogContent = styled(Dialog.Content, {
 })
 
 export const ContainerTitle = styled('div', {
-  margin: '-25px 0',
   display: 'flex',
   alignItems: 'start',
   justifyContent: 'space-between',

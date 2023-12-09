@@ -4,7 +4,7 @@ import { TooltipContentProps } from '@radix-ui/react-tooltip'
 
 export interface TooltipProps extends TooltipContentProps {
   children: ReactNode
-  tooltipContent: string | ReactNode
+  tooltipContent?: string | ReactNode
 }
 
 export const Tooltip: React.FC<TooltipProps> = ({
@@ -17,9 +17,13 @@ export const Tooltip: React.FC<TooltipProps> = ({
       <Root>
         <Trigger asChild>{children}</Trigger>
         <Portal>
-          <Content sideOffset={5} {...props}>
-            {tooltipContent}
-          </Content>
+          {tooltipContent ? (
+            <Content sideOffset={5} {...props}>
+              {tooltipContent}
+            </Content>
+          ) : (
+            <></>
+          )}
         </Portal>
       </Root>
     </Provider>
